@@ -1,0 +1,7 @@
+# 6 - Из списка выше оставьте только те пары, где сумма кортежа кратна 5
+# Пример
+# [(10,25),(3,4),(4,1)] => [(10,25),(4,1)]
+
+n_list = [random.randint(0,100) for i in range(200)]
+n_list = list(filter((lambda i: i[0]!=i[1]), enumerate(n_list)))
+print(list(filter(lambda i: i[0]+i[1]==5, n_list)))
